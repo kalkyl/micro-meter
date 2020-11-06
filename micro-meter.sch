@@ -14,9 +14,9 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text GLabel 2300 3250 2    50   Output ~ 0
-USART_TX
+USART1_TX
 Text GLabel 2300 3350 2    50   Input ~ 0
-USART_RX
+USART1_RX
 Text GLabel 2300 2350 2    50   Input ~ 0
 AIN0
 Text GLabel 2300 2450 2    50   Input ~ 0
@@ -1996,9 +1996,9 @@ F 3 "" H 2850 7350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 1000 3050 0    50   BiDi ~ 0
-I2C2_SCL
+I2C1_SCL
 Text GLabel 1000 3150 0    50   BiDi ~ 0
-I2C2_SDA
+I2C1_SDA
 $Comp
 L Connector:TestPoint_2Pole TP?
 U 1 1 5FA16E4B
