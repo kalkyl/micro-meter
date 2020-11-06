@@ -141,12 +141,12 @@ Wire Wire Line
 $Comp
 L power:+3V3 #PWR?
 U 1 1 5FA0558C
-P 3400 750
-F 0 "#PWR?" H 3400 600 50  0001 C CNN
-F 1 "+3V3" H 3250 800 50  0000 C CNN
-F 2 "" H 3400 750 50  0001 C CNN
-F 3 "" H 3400 750 50  0001 C CNN
-	1    3400 750 
+P 3600 750
+F 0 "#PWR?" H 3600 600 50  0001 C CNN
+F 1 "+3V3" H 3450 800 50  0000 C CNN
+F 2 "" H 3600 750 50  0001 C CNN
+F 3 "" H 3600 750 50  0001 C CNN
+	1    3600 750 
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -199,31 +199,7 @@ F 3 "" H 2400 7350 50  0001 C CNN
 $EndComp
 Text GLabel 1000 2750 0    50   Output ~ 0
 TIM2_PWM2
-$Comp
-L Device:R R?
-U 1 1 5FA10F93
-P 850 1500
-F 0 "R?" H 920 1546 50  0000 L CNN
-F 1 "15k" H 920 1455 50  0000 L CNN
-F 2 "" V 780 1500 50  0001 C CNN
-F 3 "~" H 850 1500 50  0001 C CNN
-	1    850  1500
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	1000 1350 850  1350
-$Comp
-L power:GND #PWR?
-U 1 1 5FA11EBD
-P 850 1650
-F 0 "#PWR?" H 850 1400 50  0001 C CNN
-F 1 "GND" H 855 1477 50  0000 C CNN
-F 2 "" H 850 1650 50  0001 C CNN
-F 3 "" H 850 1650 50  0001 C CNN
-	1    850  1650
-	1    0    0    -1  
-$EndComp
-Text Label 950  1350 2    50   ~ 0
+Text Label 800  1350 2    50   ~ 0
 BOOT0
 $Comp
 L power:GND #PWR?
@@ -241,14 +217,10 @@ AIN2
 Text GLabel 2300 2650 2    50   Input ~ 0
 AIN3
 NoConn ~ 2300 2750
-Text Label 2300 2750 0    50   ~ 0
-I2S_WS
-Text Label 2300 2850 0    50   ~ 0
-I2S_CK
-NoConn ~ 2300 2850
-NoConn ~ 2300 2950
-Text Label 2300 2950 0    50   ~ 0
-I2S_MCK
+Text Label 1000 2550 2    50   ~ 0
+I2S5_WS
+Text Label 1000 2450 2    50   ~ 0
+I2S5_CK
 $Comp
 L LED:WS2812B D?
 U 1 1 5FA20AD9
@@ -347,7 +319,7 @@ Wire Wire Line
 Wire Wire Line
 	4000 4800 4050 4800
 Text GLabel 3350 4500 1    50   Input ~ 0
-I2S_SD
+I2S5_SD
 $Comp
 L Device:R R?
 U 1 1 5FA4F422
@@ -566,8 +538,8 @@ F 3 "" H 6200 2200 50  0001 C CNN
 	1    6200 2200
 	1    0    0    -1  
 $EndComp
-Text GLabel 2300 3050 2    50   Output ~ 0
-I2S_SD
+Text GLabel 1000 3250 0    50   Output ~ 0
+I2S5_SD
 $Comp
 L Connector:TestPoint_2Pole TP?
 U 1 1 5FAE18DF
@@ -2024,9 +1996,9 @@ F 3 "" H 2850 7350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 1000 3050 0    50   BiDi ~ 0
-I2C_SCL
+I2C2_SCL
 Text GLabel 1000 3150 0    50   BiDi ~ 0
-I2C_SDA
+I2C2_SDA
 $Comp
 L Connector:TestPoint_2Pole TP?
 U 1 1 5FA16E4B
@@ -2106,57 +2078,57 @@ Connection ~ 2400 900
 Wire Wire Line
 	2400 900  1900 900 
 Wire Wire Line
-	3400 750  3100 750 
+	3600 750  3300 750 
 Wire Wire Line
-	3400 800  3400 750 
-Connection ~ 3400 750 
+	3600 800  3600 750 
+Connection ~ 3600 750 
 Wire Wire Line
-	3100 800  3100 750 
-Connection ~ 3100 750 
+	3300 800  3300 750 
+Connection ~ 3300 750 
 Wire Wire Line
-	3100 750  2800 750 
+	3300 750  3000 750 
 $Comp
 L power:GND #PWR?
 U 1 1 5FC72BFC
-P 3400 1000
-F 0 "#PWR?" H 3400 750 50  0001 C CNN
-F 1 "GND" H 3405 827 50  0000 C CNN
-F 2 "" H 3400 1000 50  0001 C CNN
-F 3 "" H 3400 1000 50  0001 C CNN
-	1    3400 1000
+P 3600 1000
+F 0 "#PWR?" H 3600 750 50  0001 C CNN
+F 1 "GND" H 3605 827 50  0000 C CNN
+F 2 "" H 3600 1000 50  0001 C CNN
+F 3 "" H 3600 1000 50  0001 C CNN
+	1    3600 1000
 	-1   0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5FC730AE
-P 3100 1000
-F 0 "#PWR?" H 3100 750 50  0001 C CNN
-F 1 "GND" H 3105 827 50  0000 C CNN
-F 2 "" H 3100 1000 50  0001 C CNN
-F 3 "" H 3100 1000 50  0001 C CNN
-	1    3100 1000
+P 3300 1000
+F 0 "#PWR?" H 3300 750 50  0001 C CNN
+F 1 "GND" H 3305 827 50  0000 C CNN
+F 2 "" H 3300 1000 50  0001 C CNN
+F 3 "" H 3300 1000 50  0001 C CNN
+	1    3300 1000
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C?
 U 1 1 5FC42480
-P 2800 900
-F 0 "C?" H 2700 850 50  0000 R CNN
-F 1 "10u" H 2700 950 50  0000 R CNN
-F 2 "" H 2800 900 50  0001 C CNN
-F 3 "~" H 2800 900 50  0001 C CNN
-	1    2800 900 
+P 3000 900
+F 0 "C?" H 2900 850 50  0000 R CNN
+F 1 "10u" H 2900 950 50  0000 R CNN
+F 2 "" H 3000 900 50  0001 C CNN
+F 3 "~" H 3000 900 50  0001 C CNN
+	1    3000 900 
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:C_Small C?
 U 1 1 5FB0DDAC
-P 3400 900
-F 0 "C?" H 3600 850 50  0000 R CNN
-F 1 "10u" H 3650 950 50  0000 R CNN
-F 2 "" H 3400 900 50  0001 C CNN
-F 3 "~" H 3400 900 50  0001 C CNN
-	1    3400 900 
+P 3600 900
+F 0 "C?" H 3800 850 50  0000 R CNN
+F 1 "10u" H 3850 950 50  0000 R CNN
+F 2 "" H 3600 900 50  0001 C CNN
+F 3 "~" H 3600 900 50  0001 C CNN
+	1    3600 900 
 	1    0    0    1   
 $EndComp
 $Comp
@@ -2169,17 +2141,6 @@ F 2 "" H 6500 1600 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" H 6500 1600 50  0001 C CNN
 	1    6500 1600
 	1    0    0    1   
-$EndComp
-$Comp
-L MCU_ST_STM32F4:STM32F411CEUx U2
-U 1 1 5FEBA533
-P 1700 2450
-F 0 "U2" H 1650 2600 50  0000 C CNN
-F 1 "STM32F411CEU6" H 1650 2500 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm" H 1100 950 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00115249.pdf" H 1700 2450 50  0001 C CNN
-	1    1700 2450
-	1    0    0    -1  
 $EndComp
 $Comp
 L Amplifier_Operational:MCP6002-xSN U?
@@ -2268,12 +2229,12 @@ USB_D-
 $Comp
 L power:GND #PWR?
 U 1 1 5FF15530
-P 2800 1000
-F 0 "#PWR?" H 2800 750 50  0001 C CNN
-F 1 "GND" H 2805 827 50  0000 C CNN
-F 2 "" H 2800 1000 50  0001 C CNN
-F 3 "" H 2800 1000 50  0001 C CNN
-	1    2800 1000
+P 3000 1000
+F 0 "#PWR?" H 3000 750 50  0001 C CNN
+F 1 "GND" H 3005 827 50  0000 C CNN
+F 2 "" H 3000 1000 50  0001 C CNN
+F 3 "" H 3000 1000 50  0001 C CNN
+	1    3000 1000
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
@@ -3064,17 +3025,17 @@ Connection ~ 1800 4100
 Wire Wire Line
 	1800 4100 1900 4100
 Wire Wire Line
-	1800 750  2800 750 
+	1800 750  2700 750 
 Connection ~ 1800 750 
 $Comp
 L Device:C_Small C?
 U 1 1 5FB37FAB
-P 3100 900
-F 0 "C?" H 3000 850 50  0000 R CNN
-F 1 "10u" H 3000 950 50  0000 R CNN
-F 2 "" H 3100 900 50  0001 C CNN
-F 3 "~" H 3100 900 50  0001 C CNN
-	1    3100 900 
+P 3300 900
+F 0 "C?" H 3200 850 50  0000 R CNN
+F 1 "10u" H 3200 950 50  0000 R CNN
+F 2 "" H 3300 900 50  0001 C CNN
+F 3 "~" H 3300 900 50  0001 C CNN
+	1    3300 900 
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -3114,9 +3075,229 @@ Wire Wire Line
 	10700 4800 10900 4800
 Wire Wire Line
 	10900 4800 10900 4850
-Connection ~ 2800 750 
+Connection ~ 3000 750 
 Text Notes 1900 6650 0    50   ~ 0
 +4.3V
 Wire Wire Line
-	2800 800  2800 750 
+	3000 800  3000 750 
+$Comp
+L power:GND #PWR?
+U 1 1 5FA8EE53
+P 900 1750
+F 0 "#PWR?" H 900 1500 50  0001 C CNN
+F 1 "GND" H 905 1577 50  0000 C CNN
+F 2 "" H 900 1750 50  0001 C CNN
+F 3 "" H 900 1750 50  0001 C CNN
+	1    900  1750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5FA8EE5D
+P 900 1650
+F 0 "C?" H 850 1600 50  0000 R CNN
+F 1 "4u7" H 900 1750 50  0000 R CNN
+F 2 "" H 900 1650 50  0001 C CNN
+F 3 "~" H 900 1650 50  0001 C CNN
+	1    900  1650
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	1000 1350 700  1350
+$Comp
+L Device:R R?
+U 1 1 5FA10F93
+P 700 1500
+F 0 "R?" H 770 1546 50  0000 L CNN
+F 1 "15k" H 770 1455 50  0000 L CNN
+F 2 "" V 630 1500 50  0001 C CNN
+F 3 "~" H 700 1500 50  0001 C CNN
+	1    700  1500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FA11EBD
+P 700 1750
+F 0 "#PWR?" H 700 1500 50  0001 C CNN
+F 1 "GND" H 705 1577 50  0000 C CNN
+F 2 "" H 700 1750 50  0001 C CNN
+F 3 "" H 700 1750 50  0001 C CNN
+	1    700  1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	700  1650 700  1750
+Wire Wire Line
+	900  1550 1000 1550
+$Comp
+L Device:C_Small C?
+U 1 1 5FAF6753
+P 2700 900
+F 0 "C?" H 2600 850 50  0000 R CNN
+F 1 "10u" H 2600 950 50  0000 R CNN
+F 2 "" H 2700 900 50  0001 C CNN
+F 3 "~" H 2700 900 50  0001 C CNN
+	1    2700 900 
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FAF675D
+P 2700 1000
+F 0 "#PWR?" H 2700 750 50  0001 C CNN
+F 1 "GND" H 2705 827 50  0000 C CNN
+F 2 "" H 2700 1000 50  0001 C CNN
+F 3 "" H 2700 1000 50  0001 C CNN
+	1    2700 1000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 800  2700 750 
+Connection ~ 2700 750 
+Wire Wire Line
+	2700 750  3000 750 
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even J?
+U 1 1 5FA56676
+P 1350 5000
+F 0 "J?" H 1400 5317 50  0000 C CNN
+F 1 "SPI" H 1400 5226 50  0000 C CNN
+F 2 "" H 1350 5000 50  0001 C CNN
+F 3 "~" H 1350 5000 50  0001 C CNN
+	1    1350 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FA58966
+P 1150 4900
+F 0 "#PWR?" H 1150 4650 50  0001 C CNN
+F 1 "GND" V 1050 4850 50  0000 C CNN
+F 2 "" H 1150 4900 50  0001 C CNN
+F 3 "" H 1150 4900 50  0001 C CNN
+	1    1150 4900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5FA590ED
+P 1650 4900
+F 0 "#PWR?" H 1650 4750 50  0001 C CNN
+F 1 "+3V3" V 1550 4950 50  0000 C CNN
+F 2 "" H 1650 4900 50  0001 C CNN
+F 3 "" H 1650 4900 50  0001 C CNN
+	1    1650 4900
+	0    1    1    0   
+$EndComp
+Text GLabel 1150 5000 0    50   Input ~ 0
+CE
+Text GLabel 1150 5100 0    50   Input ~ 0
+SPI2_SCK
+Text GLabel 1150 5200 0    50   Output ~ 0
+SPI2_CIPO
+Text GLabel 1650 5100 2    50   Input ~ 0
+SPI2_COPI
+Text GLabel 1650 5200 2    50   Output ~ 0
+IRQ
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even J?
+U 1 1 5FA7B669
+P 1350 5750
+F 0 "J?" H 1400 6067 50  0000 C CNN
+F 1 "I2C / UART" H 1400 5976 50  0000 C CNN
+F 2 "" H 1350 5750 50  0001 C CNN
+F 3 "~" H 1350 5750 50  0001 C CNN
+	1    1350 5750
+	1    0    0    -1  
+$EndComp
+Text GLabel 1150 5650 0    50   BiDi ~ 0
+I2C2_SCL
+Text GLabel 1150 5750 0    50   BiDi ~ 0
+I2C2_SDA
+Text GLabel 1150 5850 0    50   Input ~ 0
+USART_TX
+Text GLabel 1150 5950 0    50   Output ~ 0
+USART_RX
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5FA7E99C
+P 1650 5650
+F 0 "#PWR?" H 1650 5500 50  0001 C CNN
+F 1 "+3V3" V 1600 5850 50  0000 C CNN
+F 2 "" H 1650 5650 50  0001 C CNN
+F 3 "" H 1650 5650 50  0001 C CNN
+	1    1650 5650
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5FA7F082
+P 1650 5950
+F 0 "#PWR?" H 1650 5800 50  0001 C CNN
+F 1 "+3V3" V 1700 6150 50  0000 C CNN
+F 2 "" H 1650 5950 50  0001 C CNN
+F 3 "" H 1650 5950 50  0001 C CNN
+	1    1650 5950
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FA7F53F
+P 1750 5750
+F 0 "#PWR?" H 1750 5500 50  0001 C CNN
+F 1 "GND" V 1850 5700 50  0000 C CNN
+F 2 "" H 1750 5750 50  0001 C CNN
+F 3 "" H 1750 5750 50  0001 C CNN
+	1    1750 5750
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	1750 5750 1700 5750
+Wire Wire Line
+	1650 5850 1700 5850
+Wire Wire Line
+	1700 5850 1700 5750
+Connection ~ 1700 5750
+Wire Wire Line
+	1700 5750 1650 5750
+Text GLabel 1000 3450 0    50   Output ~ 0
+SPI2_SCK
+Text GLabel 1000 3750 0    50   Input ~ 0
+SPI2_CIPO
+Text GLabel 1000 3850 0    50   Output ~ 0
+SPI2_COPI
+Text GLabel 1000 3550 0    50   Output ~ 0
+~SPI2_CS
+Text GLabel 1000 3650 0    50   Input ~ 0
+IRQ
+Text GLabel 1650 5000 2    50   Input ~ 0
+~SPI2_CS
+Text GLabel 2300 2950 2    50   Output ~ 0
+CE+I2S2_MCK
+$Comp
+L MCU_ST_STM32F4:STM32F411CEUx U2
+U 1 1 5FEBA533
+P 1700 2450
+F 0 "U2" H 1650 2600 50  0000 C CNN
+F 1 "STM32F411CEU6" H 1650 2500 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm" H 1100 950 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00115249.pdf" H 1700 2450 50  0001 C CNN
+	1    1700 2450
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1000 2450
+NoConn ~ 1000 2550
+NoConn ~ 2300 3050
+NoConn ~ 2300 2850
+NoConn ~ 2300 3150
+NoConn ~ 1000 2650
+NoConn ~ 1000 2850
+NoConn ~ 1000 2950
+NoConn ~ 1000 3350
+NoConn ~ 1000 1750
+NoConn ~ 1000 1850
+NoConn ~ 1000 2050
+NoConn ~ 1000 2150
+NoConn ~ 1000 2250
 $EndSCHEMATC
