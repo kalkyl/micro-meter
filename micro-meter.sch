@@ -1907,60 +1907,30 @@ $EndComp
 $Comp
 L Connector:USB_B_Micro J9
 U 1 1 5FE0B06F
-P 10800 2500
-F 0 "J9" H 10857 2967 50  0000 C CNN
-F 1 "USB_B_Micro" H 10857 2876 50  0000 C CNN
-F 2 "Connector_USB:USB_Micro-B_Wuerth_629105150521" H 10950 2450 50  0001 C CNN
-F 3 "~" H 10950 2450 50  0001 C CNN
-	1    10800 2500
+P 10100 2900
+F 0 "J9" H 10157 3367 50  0000 C CNN
+F 1 "USB_B_Micro" H 10157 3276 50  0000 C CNN
+F 2 "Connector_USB:USB_Micro-B_Wuerth_629105150521" H 10250 2850 50  0001 C CNN
+F 3 "~" H 10250 2850 50  0001 C CNN
+	1    10100 2900
 	-1   0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0127
 U 1 1 5FED51E9
-P 10800 2900
-F 0 "#PWR0127" H 10800 2650 50  0001 C CNN
-F 1 "GND" H 10800 2750 50  0000 C CNN
-F 2 "" H 10800 2900 50  0001 C CNN
-F 3 "" H 10800 2900 50  0001 C CNN
-	1    10800 2900
+P 10100 3300
+F 0 "#PWR0127" H 10100 3050 50  0001 C CNN
+F 1 "GND" H 10100 3150 50  0000 C CNN
+F 2 "" H 10100 3300 50  0001 C CNN
+F 3 "" H 10100 3300 50  0001 C CNN
+	1    10100 3300
 	-1   0    0    -1  
 $EndComp
-NoConn ~ 10900 2900
-NoConn ~ 10500 2700
-Text GLabel 10500 2500 0    50   Output ~ 0
-USB_CON_D+
-Text GLabel 10500 2600 0    50   Output ~ 0
-USB_CON_D-
-$Comp
-L power:GND #PWR0117
-U 1 1 5FEF87AC
-P 9950 3750
-F 0 "#PWR0117" H 9950 3500 50  0001 C CNN
-F 1 "GND" H 9950 3600 50  0000 C CNN
-F 2 "" H 9950 3750 50  0001 C CNN
-F 3 "" H 9950 3750 50  0001 C CNN
-	1    9950 3750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR0116
-U 1 1 5FEF8E42
-P 9950 2950
-F 0 "#PWR0116" H 9950 2800 50  0001 C CNN
-F 1 "+5V" H 9950 3100 50  0000 C CNN
-F 2 "" H 9950 2950 50  0001 C CNN
-F 3 "" H 9950 2950 50  0001 C CNN
-	1    9950 2950
-	1    0    0    -1  
-$EndComp
-Text GLabel 9550 3250 0    50   Input ~ 0
-USB_CON_D+
-Text GLabel 10350 3250 2    50   Input ~ 0
-USB_CON_D-
-Text GLabel 9550 3450 0    50   Output ~ 0
+NoConn ~ 10200 3300
+NoConn ~ 9800 3100
+Text GLabel 9800 2900 0    50   Output ~ 0
 USB_D+
-Text GLabel 10350 3450 2    50   Output ~ 0
+Text GLabel 9800 3000 0    50   Output ~ 0
 USB_D-
 $Comp
 L power:GND #PWR029
@@ -1989,7 +1959,7 @@ $EndComp
 Connection ~ 4000 6950
 Text GLabel 3500 7350 3    50   Input ~ 0
 VBUS
-Text GLabel 10500 2300 0    50   Output ~ 0
+Text GLabel 9800 2700 0    50   Output ~ 0
 VBUS
 Text GLabel 10900 4850 3    50   Output ~ 0
 LED_DATA
@@ -2723,7 +2693,7 @@ Wire Wire Line
 Text Notes 9950 550  0    50   ~ 0
 Serial wire debug header
 Text Notes 8850 2000 0    50   ~ 0
-USB connector + ESD protection
+USB connector
 Text Notes 550  600  0    50   ~ 0
 MCU
 Text Notes 2950 4100 0    50   ~ 0
@@ -3332,17 +3302,6 @@ F 3 "" H 8650 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Power_Protection:USBLC6-2SC6 U5
-U 1 1 5FEA7054
-P 9950 3350
-F 0 "U5" H 9700 3700 50  0000 C CNN
-F 1 "USBLC6-2SC6" H 10300 3000 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 9950 2850 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" H 10150 3700 50  0001 C CNN
-	1    9950 3350
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:Crystal_GND24_Small Y1
 U 1 1 5FA807EB
 P 1000 2200
@@ -3789,17 +3748,6 @@ Wire Wire Line
 	3200 6700 2900 6700
 Wire Wire Line
 	2800 6700 2900 6700
-$Comp
-L Connector:TestPoint TP3
-U 1 1 604DFC1D
-P 3200 7500
-F 0 "TP3" H 3350 7550 50  0000 C CNN
-F 1 "TP_5V" H 3200 7700 50  0000 C CNN
-F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 3200 7500 50  0001 C CNN
-F 3 "~" H 3200 7500 50  0001 C CNN
-	1    3200 7500
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	2250 7000 2900 7000
 Wire Wire Line
@@ -3870,8 +3818,6 @@ F 3 "" H 850 7600 50  0001 C CNN
 $EndComp
 Text GLabel 850  7500 2    50   Input ~ 0
 5V_OUT
-Text GLabel 3200 7500 1    50   Input ~ 0
-5V_OUT
 Text GLabel 3400 6750 3    50   Output ~ 0
 5V_OUT
 Wire Wire Line
@@ -3887,8 +3833,8 @@ U 1 1 60104FC2
 P 2700 6700
 F 0 "L1" V 2885 6700 50  0000 C CNN
 F 1 "10u" V 2794 6700 50  0000 C CNN
-F 2 "Inductor_SMD:L_Sunlord_MWSA0518_5.4x5.2mm" H 2700 6700 50  0001 C CNN
-F 3 "~" H 2700 6700 50  0001 C CNN
+F 2 "Inductor_SMD:L_TDK_NLV25_2.5x2.0mm" H 2700 6700 50  0001 C CNN
+F 3 "C98353" H 2700 6700 50  0001 C CNN
 	1    2700 6700
 	0    -1   -1   0   
 $EndComp
@@ -3917,29 +3863,29 @@ F 3 "~" H 4600 3150 50  0001 C CNN
 	1    4600 3150
 	-1   0    0    -1  
 $EndComp
-Text GLabel 4400 3700 0    50   Input ~ 0
+Text GLabel 4400 3600 0    50   Input ~ 0
 LEDS_EXT
 $Comp
 L power:+5V #PWR0131
 U 1 1 5FB91854
-P 4400 3050
-F 0 "#PWR0131" H 4400 2900 50  0001 C CNN
-F 1 "+5V" H 4550 3100 50  0000 C CNN
-F 2 "" H 4400 3050 50  0001 C CNN
-F 3 "" H 4400 3050 50  0001 C CNN
-	1    4400 3050
-	-1   0    0    -1  
+P 4400 3250
+F 0 "#PWR0131" H 4400 3100 50  0001 C CNN
+F 1 "+5V" V 4400 3450 50  0000 C CNN
+F 2 "" H 4400 3250 50  0001 C CNN
+F 3 "" H 4400 3250 50  0001 C CNN
+	1    4400 3250
+	0    -1   1    0   
 $EndComp
 $Comp
 L power:GND #PWR0132
 U 1 1 5FB92B2A
-P 4400 3250
-F 0 "#PWR0132" H 4400 3000 50  0001 C CNN
-F 1 "GND" H 4550 3200 50  0000 C CNN
-F 2 "" H 4400 3250 50  0001 C CNN
-F 3 "" H 4400 3250 50  0001 C CNN
-	1    4400 3250
-	-1   0    0    -1  
+P 4400 3150
+F 0 "#PWR0132" H 4400 2900 50  0001 C CNN
+F 1 "GND" V 4400 2950 50  0000 C CNN
+F 2 "" H 4400 3150 50  0001 C CNN
+F 3 "" H 4400 3150 50  0001 C CNN
+	1    4400 3150
+	0    1    -1   0   
 $EndComp
 Text GLabel 1200 5000 0    50   Input ~ 0
 CE+I2S2_MCK
@@ -3954,30 +3900,8 @@ F 3 "~" H 4600 3700 50  0001 C CNN
 	1    4600 3700
 	-1   0    0    -1  
 $EndComp
-Text GLabel 4400 3150 0    50   Input ~ 0
+Text GLabel 4400 3050 0    50   Input ~ 0
 I2S5_SD
-$Comp
-L power:+5V #PWR0133
-U 1 1 5FD5393C
-P 4400 3600
-F 0 "#PWR0133" H 4400 3450 50  0001 C CNN
-F 1 "+5V" H 4550 3650 50  0000 C CNN
-F 2 "" H 4400 3600 50  0001 C CNN
-F 3 "" H 4400 3600 50  0001 C CNN
-	1    4400 3600
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0134
-U 1 1 5FD53946
-P 4400 3800
-F 0 "#PWR0134" H 4400 3550 50  0001 C CNN
-F 1 "GND" H 4550 3750 50  0000 C CNN
-F 2 "" H 4400 3800 50  0001 C CNN
-F 3 "" H 4400 3800 50  0001 C CNN
-	1    4400 3800
-	-1   0    0    -1  
-$EndComp
 Wire Notes Line
 	4750 50   4750 4000
 Text GLabel 10900 6000 3    50   Output ~ 0
@@ -3986,4 +3910,26 @@ Wire Wire Line
 	10900 6000 10900 5950
 Wire Wire Line
 	10900 5950 10700 5950
+$Comp
+L power:+5V #PWR0116
+U 1 1 5FD3783E
+P 4400 3800
+F 0 "#PWR0116" H 4400 3650 50  0001 C CNN
+F 1 "+5V" V 4400 4000 50  0000 C CNN
+F 2 "" H 4400 3800 50  0001 C CNN
+F 3 "" H 4400 3800 50  0001 C CNN
+	1    4400 3800
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FD4B157
+P 4400 3700
+F 0 "#PWR?" H 4400 3450 50  0001 C CNN
+F 1 "GND" V 4400 3500 50  0000 C CNN
+F 2 "" H 4400 3700 50  0001 C CNN
+F 3 "" H 4400 3700 50  0001 C CNN
+	1    4400 3700
+	0    1    -1   0   
+$EndComp
 $EndSCHEMATC
