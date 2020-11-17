@@ -248,7 +248,7 @@ F 3 "" H 5750 2200 50  0001 C CNN
 	1    5750 2200
 	-1   0    0    1   
 $EndComp
-Text GLabel 6950 1600 2    50   Output ~ 0
+Text GLabel 9250 850  0    50   Output ~ 0
 AIN0
 Wire Wire Line
 	6950 1600 6850 1600
@@ -283,7 +283,7 @@ L Connector:Conn_01x02_Male J4
 U 1 1 5FA6B471
 P 5100 1550
 F 0 "J4" H 5000 1600 50  0000 C CNN
-F 1 "IN1" H 5000 1500 50  0000 C CNN
+F 1 "IN3" H 5000 1500 50  0000 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 5100 1550 50  0001 C CNN
 F 3 "~" H 5100 1550 50  0001 C CNN
 	1    5100 1550
@@ -302,7 +302,7 @@ L Connector:TestPoint TP6
 U 1 1 5FAA848A
 P 6850 1600
 F 0 "TP6" H 7000 1750 50  0000 C CNN
-F 1 "TP_AIN0" H 7050 1850 50  0000 C CNN
+F 1 "TP_AIN2" H 7050 1850 50  0000 C CNN
 F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 6850 1600 50  0001 C CNN
 F 3 "~" H 6850 1600 50  0001 C CNN
 	1    6850 1600
@@ -916,7 +916,7 @@ F 3 "" H 5750 3800 50  0001 C CNN
 	1    5750 3800
 	-1   0    0    1   
 $EndComp
-Text GLabel 6950 3200 2    50   Output ~ 0
+Text GLabel 9250 1400 0    50   Output ~ 0
 AIN1
 Wire Wire Line
 	6950 3200 6850 3200
@@ -951,7 +951,7 @@ L Connector:Conn_01x02_Male J5
 U 1 1 5FB723A9
 P 5100 3150
 F 0 "J5" H 5000 3200 50  0000 C CNN
-F 1 "IN2" H 5000 3100 50  0000 C CNN
+F 1 "IN4" H 5000 3100 50  0000 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 5100 3150 50  0001 C CNN
 F 3 "~" H 5100 3150 50  0001 C CNN
 	1    5100 3150
@@ -1149,67 +1149,12 @@ Text GLabel 1700 5100 2    50   Input ~ 0
 SPI2_COPI
 Text GLabel 1700 5200 2    50   Output ~ 0
 IRQ
-$Comp
-L Connector_Generic:Conn_02x04_Odd_Even J3
-U 1 1 5FA7B669
-P 1400 5650
-F 0 "J3" H 1450 5967 50  0000 C CNN
-F 1 "I2C / UART" H 1450 5876 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical" H 1400 5650 50  0001 C CNN
-F 3 "~" H 1400 5650 50  0001 C CNN
-	1    1400 5650
-	1    0    0    -1  
-$EndComp
-Text GLabel 1200 5550 0    50   BiDi ~ 0
-I2C2_SCL
-Text GLabel 1200 5650 0    50   BiDi ~ 0
-I2C2_SDA
-Text GLabel 1200 5750 0    50   Input ~ 0
-USART_TX
-Text GLabel 1200 5850 0    50   Output ~ 0
-USART_RX
-$Comp
-L power:+3V3 #PWR013
-U 1 1 5FA7E99C
-P 1700 5550
-F 0 "#PWR013" H 1700 5400 50  0001 C CNN
-F 1 "+3V3" V 1650 5750 50  0000 C CNN
-F 2 "" H 1700 5550 50  0001 C CNN
-F 3 "" H 1700 5550 50  0001 C CNN
-	1    1700 5550
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+3V3 #PWR014
-U 1 1 5FA7F082
-P 1700 5850
-F 0 "#PWR014" H 1700 5700 50  0001 C CNN
-F 1 "+3V3" V 1750 6050 50  0000 C CNN
-F 2 "" H 1700 5850 50  0001 C CNN
-F 3 "" H 1700 5850 50  0001 C CNN
-	1    1700 5850
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR015
-U 1 1 5FA7F53F
-P 1800 5650
-F 0 "#PWR015" H 1800 5400 50  0001 C CNN
-F 1 "GND" V 1900 5600 50  0000 C CNN
-F 2 "" H 1800 5650 50  0001 C CNN
-F 3 "" H 1800 5650 50  0001 C CNN
-	1    1800 5650
-	0    -1   1    0   
-$EndComp
-Wire Wire Line
-	1800 5650 1750 5650
-Wire Wire Line
-	1700 5750 1750 5750
-Wire Wire Line
-	1750 5750 1750 5650
-Connection ~ 1750 5650
-Wire Wire Line
-	1750 5650 1700 5650
+Text GLabel 4400 3600 0    50   BiDi ~ 0
+I2C1_SCL
+Text GLabel 4400 3800 0    50   BiDi ~ 0
+I2C1_SDA
+Text GLabel 1150 5700 0    50   Output ~ 0
+USART1_RX
 Text GLabel 1700 5000 2    50   Input ~ 0
 ~SPI2_CS
 $Comp
@@ -1217,7 +1162,7 @@ L Connector:TestPoint TP7
 U 1 1 5FA74280
 P 6850 3200
 F 0 "TP7" H 7000 3350 50  0000 C CNN
-F 1 "TP_AIN1" H 7050 3450 50  0000 C CNN
+F 1 "TP_AIN3" H 7050 3450 50  0000 C CNN
 F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 6850 3200 50  0001 C CNN
 F 3 "~" H 6850 3200 50  0001 C CNN
 	1    6850 3200
@@ -1580,7 +1525,7 @@ L Connector:Conn_01x02_Male J6
 U 1 1 5FA9AC30
 P 9550 850
 F 0 "J6" H 9450 900 50  0000 C CNN
-F 1 "IN3" H 9450 800 50  0000 C CNN
+F 1 "IN1" H 9450 800 50  0000 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 9550 850 50  0001 C CNN
 F 3 "~" H 9550 850 50  0001 C CNN
 	1    9550 850 
@@ -1601,14 +1546,14 @@ Wire Wire Line
 	9300 1000 9300 950 
 Wire Wire Line
 	9300 950  9350 950 
-Text GLabel 9250 850  0    50   Output ~ 0
+Text GLabel 6950 1600 2    50   Output ~ 0
 AIN2
 $Comp
 L Connector:Conn_01x02_Male J7
 U 1 1 5FAA23DB
 P 9550 1400
 F 0 "J7" H 9450 1450 50  0000 C CNN
-F 1 "IN4" H 9450 1350 50  0000 C CNN
+F 1 "IN2" H 9450 1350 50  0000 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 9550 1400 50  0001 C CNN
 F 3 "~" H 9550 1400 50  0001 C CNN
 	1    9550 1400
@@ -1629,7 +1574,7 @@ Wire Wire Line
 	9300 1550 9300 1500
 Wire Wire Line
 	9300 1500 9350 1500
-Text GLabel 9250 1400 0    50   Output ~ 0
+Text GLabel 6950 3200 2    50   Output ~ 0
 AIN3
 Wire Wire Line
 	9250 1400 9350 1400
@@ -1802,17 +1747,6 @@ F 2 "MountingHole:MountingHole_3.2mm_M3" H 6800 7450 50  0001 C CNN
 F 3 "~" H 6800 7450 50  0001 C CNN
 	1    6800 7450
 	1    0    0    -1  
-$EndComp
-$Comp
-L Jumper:SolderJumper_2_Bridged JP2
-U 1 1 5FC96D66
-P 4300 1800
-F 0 "JP2" V 4300 1600 50  0000 L CNN
-F 1 "SDA_PU" V 4400 1450 50  0000 L CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 4300 1800 50  0001 C CNN
-F 3 "~" H 4300 1800 50  0001 C CNN
-	1    4300 1800
-	0    -1   1    0   
 $EndComp
 $Comp
 L Jumper:SolderJumper_2_Bridged JP1
@@ -2211,40 +2145,97 @@ Connection ~ 4000 6700
 $Comp
 L Connector:Conn_01x03_Male J11
 U 1 1 5FB8F99C
-P 4600 3150
-F 0 "J11" H 4650 3400 50  0000 C CNN
-F 1 "LEDS_DATA" V 4550 3150 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 4600 3150 50  0001 C CNN
-F 3 "~" H 4600 3150 50  0001 C CNN
-	1    4600 3150
+P 2250 5800
+F 0 "J11" H 2300 6050 50  0000 C CNN
+F 1 "LEDS_DATA" V 2200 5800 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2250 5800 50  0001 C CNN
+F 3 "~" H 2250 5800 50  0001 C CNN
+	1    2250 5800
 	-1   0    0    -1  
 $EndComp
 $Comp
 L power:+5V #PWR0131
 U 1 1 5FB91854
-P 4400 3250
-F 0 "#PWR0131" H 4400 3100 50  0001 C CNN
-F 1 "+5V" V 4400 3450 50  0000 C CNN
-F 2 "" H 4400 3250 50  0001 C CNN
-F 3 "" H 4400 3250 50  0001 C CNN
-	1    4400 3250
+P 2050 5900
+F 0 "#PWR0131" H 2050 5750 50  0001 C CNN
+F 1 "+5V" V 2050 6100 50  0000 C CNN
+F 2 "" H 2050 5900 50  0001 C CNN
+F 3 "" H 2050 5900 50  0001 C CNN
+	1    2050 5900
 	0    -1   1    0   
 $EndComp
 $Comp
 L power:GND #PWR0132
 U 1 1 5FB92B2A
-P 4400 3150
-F 0 "#PWR0132" H 4400 2900 50  0001 C CNN
-F 1 "GND" V 4400 2950 50  0000 C CNN
-F 2 "" H 4400 3150 50  0001 C CNN
-F 3 "" H 4400 3150 50  0001 C CNN
-	1    4400 3150
+P 2050 5800
+F 0 "#PWR0132" H 2050 5550 50  0001 C CNN
+F 1 "GND" V 2050 5600 50  0000 C CNN
+F 2 "" H 2050 5800 50  0001 C CNN
+F 3 "" H 2050 5800 50  0001 C CNN
+	1    2050 5800
 	0    1    -1   0   
 $EndComp
 Text GLabel 1200 5000 0    50   Input ~ 0
 CE+I2S2_MCK
-Text GLabel 4400 3050 0    50   Input ~ 0
+Text GLabel 2050 5700 0    50   Input ~ 0
 I2S5_SD
 Wire Notes Line
 	4750 50   4750 4000
+$Comp
+L Connector:Conn_01x03_Male J12
+U 1 1 5FB21F3C
+P 4600 3700
+F 0 "J12" H 4650 3950 50  0000 C CNN
+F 1 "I2C" V 4550 3700 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 4600 3700 50  0001 C CNN
+F 3 "~" H 4600 3700 50  0001 C CNN
+	1    4600 3700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J3
+U 1 1 5FB22CC0
+P 1350 5800
+F 0 "J3" H 1400 6050 50  0000 C CNN
+F 1 "UART" V 1300 5800 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 1350 5800 50  0001 C CNN
+F 3 "~" H 1350 5800 50  0001 C CNN
+	1    1350 5800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR014
+U 1 1 5FB23516
+P 4400 3700
+F 0 "#PWR014" H 4400 3450 50  0001 C CNN
+F 1 "GND" V 4400 3500 50  0000 C CNN
+F 2 "" H 4400 3700 50  0001 C CNN
+F 3 "" H 4400 3700 50  0001 C CNN
+	1    4400 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 5FB23C28
+P 1150 5800
+F 0 "#PWR013" H 1150 5550 50  0001 C CNN
+F 1 "GND" V 1150 5600 50  0000 C CNN
+F 2 "" H 1150 5800 50  0001 C CNN
+F 3 "" H 1150 5800 50  0001 C CNN
+	1    1150 5800
+	0    1    1    0   
+$EndComp
+Text GLabel 1150 5900 0    50   Input ~ 0
+USART1_TX
+$Comp
+L Jumper:SolderJumper_2_Bridged JP2
+U 1 1 5FC96D66
+P 4300 1800
+F 0 "JP2" V 4300 1600 50  0000 L CNN
+F 1 "SDA_PU" V 4400 1450 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 4300 1800 50  0001 C CNN
+F 3 "~" H 4300 1800 50  0001 C CNN
+	1    4300 1800
+	0    -1   1    0   
+$EndComp
 $EndSCHEMATC
