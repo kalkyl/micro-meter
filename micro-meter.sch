@@ -1976,13 +1976,13 @@ $EndComp
 $Comp
 L power:GND #PWR02
 U 1 1 5FECE14C
-P 950 6800
-F 0 "#PWR02" H 950 6550 50  0001 C CNN
-F 1 "GND" H 950 6650 50  0000 C CNN
-F 2 "" H 950 6800 50  0001 C CNN
-F 3 "" H 950 6800 50  0001 C CNN
-	1    950  6800
-	1    0    0    -1  
+P 800 6500
+F 0 "#PWR02" H 800 6250 50  0001 C CNN
+F 1 "GND" V 800 6300 50  0000 C CNN
+F 2 "" H 800 6500 50  0001 C CNN
+F 3 "" H 800 6500 50  0001 C CNN
+	1    800  6500
+	0    1    1    0   
 $EndComp
 $Comp
 L micro-meter:MP2359 U1
@@ -2082,8 +2082,6 @@ Wire Wire Line
 Connection ~ 3750 6950
 Wire Wire Line
 	3750 6950 4000 6950
-Wire Wire Line
-	850  6700 950  6700
 $Comp
 L Connector:Screw_Terminal_01x02 J10
 U 1 1 60749DDF
@@ -2238,4 +2236,10 @@ F 3 "~" H 4300 1800 50  0001 C CNN
 	1    4300 1800
 	0    -1   1    0   
 $EndComp
+Wire Wire Line
+	950  6800 950  6700
+Wire Wire Line
+	850  6700 850  6500
+Wire Wire Line
+	850  6500 800  6500
 $EndSCHEMATC
